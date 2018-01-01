@@ -1,0 +1,52 @@
+
+n.title	ratingcount
+Star Wars (1977)	583
+Contact (1997)	509
+Fargo (1996)	508
+Return of the Jedi (1983)	507
+Liar Liar (1997)	485
+English Patient, The (1996)	481
+Scream (1996)	478
+Toy Story (1995)	452
+Air Force One (1997)	431
+Independence Day (ID4) (1996)	429
+Raiders of the Lost Ark (1981)	420
+Godfather, The (1972)	413
+Pulp Fiction (1994)	394
+Twelve Monkeys (1995)	392
+Silence of the Lambs, The (1991)	390
+Jerry Maguire (1996)	384
+Rock, The (1996)	378
+Empire Strikes Back, The (1980)	367
+Star Trek: First Contact (1996)	365
+Back to the Future (1985)	350
+Titanic (1997)	350
+Mission: Impossible (1996)	344
+Fugitive, The (1993)	336
+Indiana Jones and the Last Crusade (1989)	331
+Willy Wonka and the Chocolate Factory (1971)	326
+Princess Bride, The (1987)	324
+Forrest Gump (1994)	321
+Saint, The (1997)	316
+Monty Python and the Holy Grail (1974)	316
+Full Monty, The (1997)	315
+Men in Black (1997)	303
+Terminator, The (1984)	301
+E.T. the Extra-Terrestrial (1982)	300
+Dead Man Walking (1995)	299
+Leaving Las Vegas (1995)	298
+Schindler's List (1993)	298
+Braveheart (1995)	297
+L.A. Confidential (1997)	297
+Terminator 2: Judgment Day (1991)	295
+Conspiracy Theory (1997)	295
+Birdcage, The (1996)	293
+Twister (1996)	293
+Mr. Holland's Opus (1995)	293
+Alien (1979)	291
+When Harry Met Sally... (1989)	290
+Aliens (1986)	284
+Shawshank Redemption, The (1994)	283
+Jaws (1975)	280
+Groundhog Day (1993)	280
+Amadeus (1984)	276

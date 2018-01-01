@@ -1,0 +1,21 @@
+You're building a massive stock trading system. Consistency is more important than anything.
+Big data is present and its really important so having access to professional support is a good idea.
+Budget is not an issue. What database will you use?
+
+CAP Triangle:
+
+                          Availability
+                           /        \
+			  /          \               
+                         /            \
+                 MySQL  /              \  Cassandra
+                       /                \
+                      /                  \
+                     /                    \
+            Consistency_ _ _ _ _ _ _ _ _Partition-Tolerance
+
+	                 HBASE & MongoDB
+
+Here we would want HBASE or MongoDB. Since there is a large support network available for MongoDB, it would be
+more successful.
+

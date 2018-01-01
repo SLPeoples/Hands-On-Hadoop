@@ -1,0 +1,129 @@
+[root@sandbox maria_dev]# python RatingsBreakdown.py u.data
+No configs found; falling back on auto-configuration
+Creating temp directory /tmp/RatingsBreakdown.maria_dev.20171227.015309.215521
+Running step 1 of 1...
+Streaming final output from /tmp/RatingsBreakdown.maria_dev.20171227.015309.215521/output...
+"1"     6111
+"2"     11370
+"3"     27145
+"4"     34174
+"5"     21203
+Removing temp directory /tmp/RatingsBreakdown.maria_dev.20171227.015309.215521...
+[root@sandbox maria_dev]# python RatingsBreakdown.py -r hadoop --hadoop-streaming-jar /usr/hdp/current/hadoop-mapreduce-client/ha
+hadoop-ant-2.7.3.2.5.0.0-1245.jar
+hadoop-ant.jar
+hadoop-archives-2.7.3.2.5.0.0-1245.jar
+hadoop-archives.jar
+hadoop-auth-2.7.3.2.5.0.0-1245.jar
+hadoop-auth.jar
+hadoop-datajoin-2.7.3.2.5.0.0-1245.jar
+hadoop-datajoin.jar
+hadoop-distcp-2.7.3.2.5.0.0-1245.jar
+hadoop-distcp.jar
+hadoop-extras-2.7.3.2.5.0.0-1245.jar
+hadoop-extras.jar
+hadoop-gridmix-2.7.3.2.5.0.0-1245.jar
+hadoop-gridmix.jar
+hadoop-mapreduce-client-app-2.7.3.2.5.0.0-1245.jar
+hadoop-mapreduce-client-app.jar
+hadoop-mapreduce-client-common-2.7.3.2.5.0.0-1245.jar
+hadoop-mapreduce-client-common.jar
+hadoop-mapreduce-client-core-2.7.3.2.5.0.0-1245.jar
+hadoop-mapreduce-client-core.jar
+hadoop-mapreduce-client-hs-2.7.3.2.5.0.0-1245.jar
+hadoop-mapreduce-client-hs.jar
+hadoop-mapreduce-client-hs-plugins-2.7.3.2.5.0.0-1245.jar
+--More--^C
+[root@sandbox maria_dev]# python RatingsBreakdown.py -r hadoop --hadoop-streaming-jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar u.data
+No configs found; falling back on auto-configuration
+Looking for hadoop binary in $PATH...
+Found hadoop binary: /usr/bin/hadoop
+Using Hadoop version 2.7.3.2.5.0.0
+Creating temp directory /tmp/RatingsBreakdown.maria_dev.20171227.015534.738633
+Copying local files to hdfs:///user/maria_dev/tmp/mrjob/RatingsBreakdown.maria_dev.20171227.015534.738633/files/...
+Running step 1 of 1...
+  packageJobJar: [] [/usr/hdp/2.5.0.0-1245/hadoop-mapreduce/hadoop-streaming-2.7.3.2.5.0.0-1245.jar] /tmp/streamjob8254424263594692125.jar tmpDir=null
+  Timeline service address: http://sandbox.hortonworks.com:8188/ws/v1/timeline/
+  Connecting to ResourceManager at sandbox.hortonworks.com/172.17.0.2:8050
+  Connecting to Application History server at sandbox.hortonworks.com/172.17.0.2:10200
+  Timeline service address: http://sandbox.hortonworks.com:8188/ws/v1/timeline/
+  Connecting to ResourceManager at sandbox.hortonworks.com/172.17.0.2:8050
+  Connecting to Application History server at sandbox.hortonworks.com/172.17.0.2:10200
+  Loaded native gpl library
+  Successfully loaded & initialized native-lzo library [hadoop-lzo rev 7a4b57bedce694048432dd5bf5b90a6c8ccdba80]
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1514261479909_0005
+  Submitted application application_1514261479909_0005
+  The url to track the job: http://sandbox.hortonworks.com:8088/proxy/application_1514261479909_0005/
+  Running job: job_1514261479909_0005
+  Job job_1514261479909_0005 running in uber mode : false
+   map 0% reduce 0%
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1514261479909_0005 completed successfully
+  Output directory: hdfs:///user/maria_dev/tmp/mrjob/RatingsBreakdown.maria_dev.20171227.015534.738633/output
+Counters: 49
+        File Input Format Counters
+                Bytes Read=2088191
+        File Output Format Counters
+                Bytes Written=49
+        File System Counters
+                FILE: Number of bytes read=800030
+                FILE: Number of bytes written=2046462
+                FILE: Number of large read operations=0
+                FILE: Number of read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=2088541
+                HDFS: Number of bytes written=49
+                HDFS: Number of large read operations=0
+                HDFS: Number of read operations=9
+                HDFS: Number of write operations=2
+        Job Counters
+                Data-local map tasks=2
+                Launched map tasks=2
+                Launched reduce tasks=1
+                Total megabyte-milliseconds taken by all map tasks=2975500
+                Total megabyte-milliseconds taken by all reduce tasks=819500
+                Total time spent by all map tasks (ms)=11902
+                Total time spent by all maps in occupied slots (ms)=11902
+                Total time spent by all reduce tasks (ms)=3278
+                Total time spent by all reduces in occupied slots (ms)=3278
+                Total vcore-milliseconds taken by all map tasks=11902
+                Total vcore-milliseconds taken by all reduce tasks=3278
+        Map-Reduce Framework
+                CPU time spent (ms)=2490
+                Combine input records=0
+                Combine output records=0
+                Failed Shuffles=0
+                GC time elapsed (ms)=281
+                Input split bytes=350
+                Map input records=100003
+                Map output bytes=600018
+                Map output materialized bytes=800036
+                Map output records=100003
+                Merged Map outputs=2
+                Physical memory (bytes) snapshot=508977152
+                Reduce input groups=5
+                Reduce input records=100003
+                Reduce output records=5
+                Reduce shuffle bytes=800036
+                Shuffled Maps =2
+                Spilled Records=200006
+                Total committed heap usage (bytes)=254279680
+                Virtual memory (bytes) snapshot=5828632576
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+Streaming final output from hdfs:///user/maria_dev/tmp/mrjob/RatingsBreakdown.maria_dev.20171227.015534.738633/output...
+"1"     6111
+"2"     11370
+"3"     27145
+"4"     34174
+"5"     21203
+Removing HDFS temp directory hdfs:///user/maria_dev/tmp/mrjob/RatingsBreakdown.maria_dev.20171227.015534.738633...
+Removing temp directory /tmp/RatingsBreakdown.maria_dev.20171227.015534.738633...

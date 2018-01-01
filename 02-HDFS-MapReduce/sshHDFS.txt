@@ -1,0 +1,51 @@
+Using username "maria_dev".
+maria_dev@127.0.0.1's password:
+[maria_dev@sandbox ~]$ hadoop fs -ls
+Found 2 items
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-27 00:29 .Trash
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-26 04:13 hive
+[maria_dev@sandbox ~]$ hadoop fs -mkdir ml-100k
+[maria_dev@sandbox ~]$ cd ml-100k
+-bash: cd: ml-100k: No such file or directory
+[maria_dev@sandbox ~]$ hadoop fs -ls
+Found 3 items
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-27 00:29 .Trash
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-26 04:13 hive
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-27 00:34 ml-100k
+[maria_dev@sandbox ~]$ wget http://media.sundog-soft.com/hadoop/ml-100k/u.data
+--2017-12-27 00:35:48--  http://media.sundog-soft.com/hadoop/ml-100k/u.data
+Resolving media.sundog-soft.com... 52.216.2.16
+Connecting to media.sundog-soft.com|52.216.2.16|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2079229 (2.0M) [application/octet-stream]
+Saving to: “u.data”
+
+100%[======================================>] 2,079,229    709K/s   in 2.9s
+
+2017-12-27 00:35:52 (709 KB/s) - “u.data” saved [2079229/2079229]
+
+[maria_dev@sandbox ~]$ hadoop fs -copyFromLocal u.data ml-100k/u.data
+[maria_dev@sandbox ~]$ wget http://media.sundog-soft.com/hadoop/ml-100k/u.item
+--2017-12-27 00:36:23--  http://media.sundog-soft.com/hadoop/ml-100k/u.item
+Resolving media.sundog-soft.com... 52.216.162.83
+Connecting to media.sundog-soft.com|52.216.162.83|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 236344 (231K) [application/octet-stream]
+Saving to: “u.item”
+
+100%[======================================>] 236,344      281K/s   in 0.8s
+
+2017-12-27 00:36:24 (281 KB/s) - “u.item” saved [236344/236344]
+
+[maria_dev@sandbox ~]$ hadoop fs -copyFromLocal u.data ml-100k/u.item
+[maria_dev@sandbox ~]$ hadoop fs -rmdir ml-100k
+rmdir: `ml-100k': Directory is not empty
+[maria_dev@sandbox ~]$ hadoop fs -rm ml-100k/u.data
+17/12/27 00:37:12 INFO fs.TrashPolicyDefault: Moved: 'hdfs://sandbox.hortonworks.com:8020/user/maria_dev/ml-100k/u.data' to trash at: hdfs://sandbox.hortonworks.com:8020/user/maria_dev/.Trash/Current/user/maria_dev/ml-100k/u.data
+[maria_dev@sandbox ~]$ hadoop fs -rm ml-100k/u.item
+17/12/27 00:37:16 INFO fs.TrashPolicyDefault: Moved: 'hdfs://sandbox.hortonworks.com:8020/user/maria_dev/ml-100k/u.item' to trash at: hdfs://sandbox.hortonworks.com:8020/user/maria_dev/.Trash/Current/user/maria_dev/ml-100k/u.item
+[maria_dev@sandbox ~]$ hadoop fs -rmdir ml-100k
+[maria_dev@sandbox ~]$ hadoop fs -ls
+Found 2 items
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-27 00:37 .Trash
+drwxr-xr-x   - maria_dev hdfs          0 2017-12-26 04:13 hive
